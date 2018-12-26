@@ -1,0 +1,27 @@
+﻿<Page
+    x:Class="App2.NewsFeedPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Button x:Name="StartTestButton" Content="Refresh" HorizontalAlignment="Left" Margin="932,95,0,0" VerticalAlignment="Top" Width="202" Click="StartTestButton_Click"/>
+
+        
+
+        <ScrollViewer Margin="215,0,0,0" Width="580" HorizontalAlignment="Left" Height="890" VerticalAlignment="Center" VerticalScrollBarVisibility="Visible">
+            <ListBox Name="postsList" ItemsSource="{x:Bind WallPosts}" >
+                <ListBox.ItemTemplate>
+                    <DataTemplate x:DataType="local:WallPost">
+                        <local:WallPostTemplate/>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+
+    </Grid>
+</Page>

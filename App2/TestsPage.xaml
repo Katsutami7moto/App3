@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="App2.TestsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" HorizontalAlignment="Right" Width="1910">
+        <ScrollViewer x:Name="friendsOnlineView" HorizontalAlignment="Left" Margin="58,355,0,0" VerticalAlignment="Top" Width="180" Height="385" HorizontalScrollBarVisibility="Visible">
+            <StackPanel x:Name="friendsOnlineStackPanel">
+
+            </StackPanel>
+        </ScrollViewer>
+        <TextBlock x:Name="friendsOnlineBlock" HorizontalAlignment="Left" Margin="58,330,0,0" TextWrapping="Wrap" Text="List of your friends online:" VerticalAlignment="Top" Width="199"/>
+        <TextBlock x:Name="errorBlock" HorizontalAlignment="Left" Margin="26,43,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="190" Width="307"/>
+        <TextBlock x:Name="errorBlock1" HorizontalAlignment="Left" Margin="26,12,0,0" TextWrapping="Wrap" Text="Error text:" VerticalAlignment="Top" Height="26" Width="97"/>
+        <ScrollViewer x:Name="group1TermsView" HorizontalAlignment="Left" Margin="284,355,0,0" VerticalAlignment="Top" Height="385" Width="186" HorizontalScrollBarVisibility="Visible">
+            <StackPanel x:Name="group1TermsStackPanel">
+
+            </StackPanel>
+        </ScrollViewer>
+        <TextBlock x:Name="group1TermsBlock" HorizontalAlignment="Left" Margin="284,330,0,0" Text="List of terms from selected groups:" TextWrapping="Wrap" VerticalAlignment="Top" Width="246"/>
+        <ScrollViewer x:Name="clustersView" HorizontalAlignment="Left" Margin="574,355,0,0" VerticalAlignment="Top" Height="385" Width="186" HorizontalScrollBarVisibility="Visible">
+            <StackPanel x:Name="clustersStackPanel">
+
+            </StackPanel>
+        </ScrollViewer>
+        <TextBlock x:Name="clustersBlock" HorizontalAlignment="Left" Margin="574,330,0,0" Text="List of clusters for selected groups:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <Button x:Name="FriendsOnlineButton" Content="Get Online Friends" HorizontalAlignment="Left" Margin="58,293,0,0" VerticalAlignment="Top" Width="171" Click="FriendsOnlineButton_Click"/>
+        <Button x:Name="WordsTestButton" Content="Words Test" HorizontalAlignment="Left" Margin="284,293,0,0" VerticalAlignment="Top" Width="229" Click="WordsTestButton_Click"/>
+        <Button x:Name="ClustersTestButton" Content="Clusters Test" HorizontalAlignment="Left" Margin="574,293,0,0" VerticalAlignment="Top" Width="229" Click="ClustersTestButton_Click"/>
+        <Button x:Name="WallPostTestButton" Content="Wall Post Test" HorizontalAlignment="Left" Margin="871,293,0,0" VerticalAlignment="Top" Width="235" Click="WallPostTestButton_Click"/>
+        <Button x:Name="DialogMiniuatureTestButton" Content="Dialog Miniature Test" HorizontalAlignment="Left" Margin="871,355,0,0" VerticalAlignment="Top" Width="235" Click="DialogMiniuatureTestButton_Click"/>
+        <Button x:Name="DialogTestButton" Content="Dialog Test" HorizontalAlignment="Left" Margin="871,415,0,0" VerticalAlignment="Top" Width="235" Click="DialogTestButton_Click"/>
+        <Button x:Name="VariableGrisTestButton" Content="Variable Grid Test" HorizontalAlignment="Left" Margin="871,471,0,0" VerticalAlignment="Top" Width="235" Click="VariableGridTestButton_Click"/>
+        <Button x:Name="DialogsListTestButton" Content="Dialogs List Test" HorizontalAlignment="Left" Margin="871,532,0,0" VerticalAlignment="Top" Width="235" Click="DialogsListTestButton_Click"/>
+        <Button x:Name="FullDialogsTestButton" Content="Full Dialogs Test" HorizontalAlignment="Left" Margin="871,593,0,0" VerticalAlignment="Top" Width="235" Click="FullDialogsTestButton_Click"/>
+        <Button x:Name="NewsFeedTestButton" Content="News Feed Test" HorizontalAlignment="Left" Margin="871,650,0,0" VerticalAlignment="Top" Width="235" Click="NewsFeedTestButton_Click"/>
+    </Grid>
+</Page>

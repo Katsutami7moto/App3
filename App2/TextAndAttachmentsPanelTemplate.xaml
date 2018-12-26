@@ -1,0 +1,31 @@
+﻿<UserControl
+    x:Class="App2.TextAndAttachmentsPanelTemplate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="Auto">
+
+    <StackPanel>
+        <TextBlock x:Name="TextBlock" Text="{x:Bind TextAndAttachments.Text}" TextWrapping="Wrap"
+                   HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Height="Auto" Visibility="{x:Bind TextAndAttachments.TextVisibility}" Padding="0,0,0,5"/>
+        <GridView x:Name="AttachmentsListBox" ItemsSource="{x:Bind TextAndAttachments.ImageAttachments}"
+                      SelectionMode="None" Visibility="{x:Bind TextAndAttachments.AttachmentsVisibility}" Padding="0,0,0,5">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="Image">
+                    <Image Source="{x:Bind Source}" MaxHeight="130" MaxWidth="130"/>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+            <GridView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <ItemsWrapGrid MaximumRowsOrColumns="3" Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </GridView.ItemsPanel>
+        </GridView>
+        <TextBlock x:Name="AuthorNameTextBlock" Text="{x:Bind TextAndAttachments.AuthorName}"
+                   Visibility="{x:Bind TextAndAttachments.AuthorVisibility}"
+                   TextWrapping="Wrap" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto"/>
+    </StackPanel>
+</UserControl>
